@@ -16,7 +16,7 @@
 #                                                                      #
 ########################################################################
 
-set -euf -o pipefail
+#set -euf -o pipefail
 
 HOSTNAME=${HOSTNAME:-}
 LOCATION=${LOCATION:-}
@@ -76,4 +76,4 @@ fi
 
 echo -n 'temp.value ' # todo: error handling?
 #pcsensor -n "$DEVICE" -a "$CALIBRATION" -p -c
-temper.py | awk '{print $7}'
+python3 /usr/share/munin/plugins/temper.py | awk '{print $7}' | sed 's/C$//'
