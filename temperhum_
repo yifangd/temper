@@ -77,6 +77,8 @@ fi
 
 OUT=/tmp/temper.py.out
 python3 /usr/share/munin/plugins/temper.py > $OUT
+# example: Bus 001 Dev 005 1a86:e025 TEMPerHUM_V3.8 26.60C 79.88F 49% - - -
+
 echo -n 'temp.value ' # todo: error handling?
 cat $OUT | awk '{print $7}' | sed 's/C$//'
 
