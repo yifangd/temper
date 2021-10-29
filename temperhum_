@@ -53,10 +53,10 @@ then
 
 	if [[ "$LOCATION" != "" ]]
 	then
-		echo "graph_title Temperature and humidity (${LOCATION})"
+		echo "graph_title Humidity and Temperature in ${LOCATION}"
 		echo "graph_info This graph shows the temperature and humidity for location ${LOCATION} in degree ${unitname}."
 	else
-		echo "graph_title Temperature and humidity"
+		echo "graph_title Humidity and Temperature"
 		echo "graph_info This graph shows the temperature and humidity in degree ${unitname}."
 	fi
 
